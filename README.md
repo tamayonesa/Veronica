@@ -27,6 +27,8 @@ Veronica no requiere dependencias Python externas.
 
 Buscar un nombre:
 
+![Veronica](veroinicaejemplo.jpg)
+
 ```bash
 python3 -m veronica --nombre "Nombre Apellido"
 ```
