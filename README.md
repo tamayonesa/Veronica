@@ -1,4 +1,19 @@
-# OSINT Orquestador – huella digital
+## VERONICA
+
+```text
+ ██▒   █▓▓█████  ██▀███   ▒█████   ███▄    █  ██▓ ▄████▄   ▄▄▄
+▓██░   █▒▓█   ▀ ▓██ ▒ ██▒▒██▒  ██▒ ██ ▀█   █ ▓██▒▒██▀ ▀█  ▒████▄
+ ▓██  █▒░▒███   ▓██ ░▄█ ▒▒██░  ██▒▓██  ▀█ ██▒▒██▒▒▓█    ▄ ▒██  ▀█▄
+  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  ▒██   ██░▓██▒  ▐▌██▒░██░▒▓▓▄ ▄██▒░██▄▄▄▄██
+   ▒▀█░  ░▒████▒░██▓ ▒██▒░ ████▓▒░▒██░   ▓██░░██░▒ ▓███▀ ░ ▓█   ▓██▒
+   ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓  ░ ░▒ ▒  ░ ▒▒   ▓▒█░
+   ░ ░░   ░ ░  ░  ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░  ░  ▒     ▒   ▒▒ ░
+     ░░     ░     ░░   ░ ░ ░ ░ ▒     ░   ░ ░  ▒ ░░          ░   ▒
+      ░     ░  ░   ░         ░ ░           ░  ░  ░ ░            ░  ░
+     ░                                           ░
+
+             ORQUESTADOR OSINT DE HUELLA DIGITAL
+```
 
 Herramienta modular en **Python 3.10+ (solo librería estándar, sin `pip install`)** que recolecta información pública sobre una persona a partir de un nombre, email, username, teléfono o dominio. Ejecuta varios módulos en paralelo, **pivota** sobre lo que descubre (un email hallado en un commit se investiga a su vez), **correlaciona** los resultados en perfiles y genera un informe HTML/JSON con un grafo de relaciones.
 
@@ -124,5 +139,11 @@ docker build -t osint-orquestador .
 docker run --rm -it -v "$PWD/resultados:/app/resultados" osint-orquestador
 docker run --rm -p 127.0.0.1:8080:8080 osint-orquestador --web --host 0.0.0.0
 ```
+
+## Ejemplo de ejecución
+
+![ejecucion](Ejecucion-ejemplo.png)
+
+![informe](Ejemplo.png)
 
 
