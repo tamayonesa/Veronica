@@ -1,0 +1,20 @@
+[
+  {"name": "GitHub", "url": "https://github.com/{}", "profile": "https://github.com/{}", "type": "status"},
+  {"name": "GitLab", "url": "https://gitlab.com/{}", "profile": "https://gitlab.com/{}", "type": "status"},
+  {"name": "Codeberg", "url": "https://codeberg.org/{}", "profile": "https://codeberg.org/{}", "type": "status"},
+  {"name": "Keybase", "url": "https://keybase.io/{}", "profile": "https://keybase.io/{}", "type": "status"},
+  {"name": "Docker Hub", "url": "https://hub.docker.com/v2/users/{}/", "profile": "https://hub.docker.com/u/{}", "type": "status"},
+  {"name": "PyPI", "url": "https://pypi.org/user/{}/", "profile": "https://pypi.org/user/{}/", "type": "status"},
+  {"name": "npm", "url": "https://www.npmjs.com/~{}", "profile": "https://www.npmjs.com/~{}", "type": "status"},
+  {"name": "DEV Community", "url": "https://dev.to/{}", "profile": "https://dev.to/{}", "type": "status"},
+  {"name": "Hacker News", "url": "https://hacker-news.firebaseio.com/v0/user/{}.json", "profile": "https://news.ycombinator.com/user?id={}", "type": "message_absent", "absent": "null"},
+  {"name": "Mastodon.social", "url": "https://mastodon.social/@{}", "profile": "https://mastodon.social/@{}", "type": "status"},
+  {"name": "Bluesky", "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={}.bsky.social", "profile": "https://bsky.app/profile/{}.bsky.social", "type": "status"},
+  {"name": "Lichess", "url": "https://lichess.org/api/user/{}", "profile": "https://lichess.org/@/{}", "type": "status"},
+  {"name": "Chess.com", "url": "https://api.chess.com/pub/player/{}", "profile": "https://www.chess.com/member/{}", "type": "status"},
+  {"name": "Medium", "url": "https://medium.com/@{}", "profile": "https://medium.com/@{}", "type": "status"},
+  {"name": "SoundCloud", "url": "https://soundcloud.com/{}", "profile": "https://soundcloud.com/{}", "type": "status"},
+  {"name": "Pastebin", "url": "https://pastebin.com/u/{}", "profile": "https://pastebin.com/u/{}", "type": "status"},
+  {"name": "Replit", "url": "https://replit.com/@{}", "profile": "https://replit.com/@{}", "type": "status"},
+  {"name": "Gravatar", "url": "https://en.gravatar.com/{}.json", "profile": "https://gravatar.com/{}", "type": "status"}
+]

@@ -1,0 +1,8 @@
+{
+  "keys": {"HIBP_API_KEY": "", "GITHUB_TOKEN": ""},
+  "tools": {"theharvester": "", "sherlock": ""},
+  "theharvester_sources": "crtsh,hackertarget,rapiddns,otx",
+  "external_timeout": 300,
+  "external_tools": [],
+  "extra_sites": []
+}

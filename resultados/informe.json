@@ -1,0 +1,5637 @@
+{
+  "herramienta": "OSINT Orquestador 1.0",
+  "inicio": "2026-11-09T17:34:49+00:00",
+  "fin": "2026-11-09T17:34:51+00:00",
+  "entradas": [
+    {
+      "tipo": "name",
+      "valor": "Paul Alejandro Tamayo Mestanza"
+    },
+    {
+      "tipo": "email",
+      "valor": "alejandro@gmail.com"
+    },
+    {
+      "tipo": "username",
+      "valor": "tamayonesa"
+    }
+  ],
+  "selectores_investigados": [
+    {
+      "tipo": "name",
+      "valor": "Paul Alejandro Tamayo Mestanza",
+      "profundidad": 0,
+      "origen": "usuario",
+      "suposicion": false
+    },
+    {
+      "tipo": "email",
+      "valor": "alejandro@gmail.com",
+      "profundidad": 0,
+      "origen": "usuario",
+      "suposicion": false
+    },
+    {
+      "tipo": "username",
+      "valor": "tamayonesa",
+      "profundidad": 0,
+      "origen": "usuario",
+      "suposicion": false
+    }
+  ],
+  "modulos": {
+    "breaches": {
+      "description": "Brechas de datos donde aparece el email (HaveIBeenPwned y XposedOrNot)",
+      "status": "ok",
+      "reason": "",
+      "selectors": 1,
+      "findings": 126,
+      "external": false,
+      "errors": 0
+    },
+    "crtsh": {
+      "description": "Subdominios descubiertos en certificados TLS públicos (Certificate Transparency)",
+      "status": "ok",
+      "reason": "",
+      "selectors": 0,
+      "findings": 0,
+      "external": false,
+      "errors": 0
+    },
+    "dns_records": {
+      "description": "Registros DNS (A, AAAA, MX, NS, TXT), SPF y DMARC mediante DNS-over-HTTPS",
+      "status": "ok",
+      "reason": "",
+      "selectors": 0,
+      "findings": 0,
+      "external": false,
+      "errors": 0
+    },
+    "email_intel": {
+      "description": "Validación del email: MX del dominio, correo desechable y perfil público de Gravatar",
+      "status": "ok",
+      "reason": "",
+      "selectors": 1,
+      "findings": 1,
+      "external": false,
+      "errors": 0
+    },
+    "github": {
+      "description": "Perfil público de GitHub y emails expuestos en commits (por username o email)",
+      "status": "ok",
+      "reason": "",
+      "selectors": 2,
+      "findings": 1,
+      "external": false,
+      "errors": 0
+    },
+    "name_intel": {
+      "description": "Genera candidatos de username/email y enlaces de búsqueda manual a partir de un nombre",
+      "status": "ok",
+      "reason": "",
+      "selectors": 1,
+      "findings": 2,
+      "external": false,
+      "errors": 0
+    },
+    "phone_info": {
+      "description": "Normaliza el teléfono (E.164), deduce país/tipo de línea y genera enlaces de verificación manual",
+      "status": "ok",
+      "reason": "",
+      "selectors": 0,
+      "findings": 0,
+      "external": false,
+      "errors": 0
+    },
+    "sherlock": {
+      "description": "Ejecuta Sherlock para buscar el username en cientos de redes sociales",
+      "status": "omitido",
+      "reason": "herramienta no instalada (sherlock); instálala o indica su ruta en config.json",
+      "selectors": 0,
+      "findings": 0,
+      "external": true,
+      "errors": 0
+    },
+    "theharvester": {
+      "description": "Ejecuta theHarvester y recoge emails, hosts e IPs del dominio",
+      "status": "omitido",
+      "reason": "herramienta no instalada (theHarvester/theharvester); instálala o indica su ruta en config.json",
+      "selectors": 0,
+      "findings": 0,
+      "external": true,
+      "errors": 0
+    },
+    "usernames": {
+      "description": "Busca el username en 18 plataformas públicas (código, foros, ajedrez, blogs...)",
+      "status": "ok",
+      "reason": "",
+      "selectors": 1,
+      "findings": 3,
+      "external": false,
+      "errors": 0
+    },
+    "whois_rdap": {
+      "description": "Datos de registro del dominio (registrador, fechas, servidores DNS, contactos) vía RDAP",
+      "status": "ok",
+      "reason": "",
+      "selectors": 0,
+      "findings": 0,
+      "external": false,
+      "errors": 0
+    }
+  },
+  "hallazgos": [
+    {
+      "module": "name_intel",
+      "kind": "guess",
+      "title": "8 posibles usernames derivados del nombre",
+      "selector": "name:paul alejandro tamayo mestanza",
+      "confidence": 0.2,
+      "url": null,
+      "data": {
+        "candidatos": [
+          "paul.alejandro",
+          "paulalejandro",
+          "paul_alejandro",
+          "palejandro",
+          "paula",
+          "alejandropaul",
+          "p.alejandro",
+          "alejandro.paul"
+        ],
+        "nota": "Suposiciones sin confirmar"
+      },
+      "timestamp": "2026-11-09T17:34:49+00:00",
+      "entities": [
+        {
+          "kind": "username",
+          "value": "paul.alejandro",
+          "relation": "posible username",
+          "pivot": true,
+          "guess": true,
+          "label": null
+        },
+        {
+          "kind": "username",
+          "value": "paulalejandro",
+          "relation": "posible username",
+          "pivot": true,
+          "guess": true,
+          "label": null
+        },
+        {
+          "kind": "username",
+          "value": "paul_alejandro",
+          "relation": "posible username",
+          "pivot": true,
+          "guess": true,
+          "label": null
+        },
+        {
+          "kind": "username",
+          "value": "palejandro",
+          "relation": "posible username",
+          "pivot": true,
+          "guess": true,
+          "label": null
+        },
+        {
+          "kind": "username",
+          "value": "paula",
+          "relation": "posible username",
+          "pivot": true,
+          "guess": true,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "name_intel",
+      "kind": "lead",
+      "title": "Enlaces de búsqueda manual",
+      "selector": "name:paul alejandro tamayo mestanza",
+      "confidence": 1.0,
+      "url": null,
+      "data": {
+        "google": "https://www.google.com/search?q=%22Paul+Alejandro+Tamayo+Mestanza%22",
+        "linkedin": "https://www.google.com/search?q=%22Paul+Alejandro+Tamayo+Mestanza%22+site%3Alinkedin.com%2Fin",
+        "github": "https://github.com/search?q=%22Paul+Alejandro+Tamayo+Mestanza%22&type=users",
+        "documentos": "https://www.google.com/search?q=%22Paul+Alejandro+Tamayo+Mestanza%22+filetype%3Apdf",
+        "noticias": "https://news.google.com/search?q=%22Paul+Alejandro+Tamayo+Mestanza%22"
+      },
+      "timestamp": "2026-11-09T17:34:49+00:00",
+      "entities": []
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: 000webhost",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "000webhost",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: 1.4BillionRecords",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "1.4BillionRecords",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: 123RF",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "123RF",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: 1Win",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "1Win",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: 8tracks",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "8tracks",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ACTMobile",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ACTMobile",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ADT",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ADT",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ATT-Speculated",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ATT-Speculated",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Addi",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Addi",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Adecco",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Adecco",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Adobe",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Adobe",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: AlienStealerLogs",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "AlienStealerLogs",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Alleged-SOCRadar",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Alleged-SOCRadar",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Altenen",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Altenen",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: AnimalJam",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "AnimalJam",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: AnimeGame",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "AnimeGame",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Animoto",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Animoto",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ApexSMS",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ApexSMS",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Appen",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Appen",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Aptoide",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Aptoide",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ArmyForceOnline",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ArmyForceOnline",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Banorte",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Banorte",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: BlankMediaGames",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "BlankMediaGames",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Bonobos",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Bonobos",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Bookmate",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Bookmate",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: BureauvanDijk",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "BureauvanDijk",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Canva",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Canva",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Charter",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Charter",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Chegg",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Chegg",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Cit0day",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Cit0day",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Collection-1",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Collection-1",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Cracked.to",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Cracked.to",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: DailyQuiz",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "DailyQuiz",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Dailymotion",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Dailymotion",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Deezer",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Deezer",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Disqus",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Disqus",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: DriveSure",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "DriveSure",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Dropbox",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Dropbox",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Dubsmash",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Dubsmash",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: DuelingNetwork",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "DuelingNetwork",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Duolingo",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Duolingo",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Edmodo",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Edmodo",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Epik",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Epik",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Evony",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Evony",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ExVagos",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ExVagos",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ExactSciences",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ExactSciences",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ExploitIN",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ExploitIN",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: GGCorp",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "GGCorp",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: GameSprite",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "GameSprite",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Ge.tt",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Ge.tt",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: GoGames",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "GoGames",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: HauteLook",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "HauteLook",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: HeatGames",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "HeatGames",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Hurb",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Hurb",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: IDCGames",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "IDCGames",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Imesh",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Imesh",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: InstantCheckmate",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "InstantCheckmate",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: InstitutoNacionalDeDeportesDeChile",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "InstitutoNacionalDeDeportesDeChile",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: JD",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "JD",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: JobandTalent",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "JobandTalent",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: JoyGames",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "JoyGames",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: KreditPlus",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "KreditPlus",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Last.fm",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Last.fm",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Ledger",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Ledger",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Leet",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Leet",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Lifeboat",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Lifeboat",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: LinkedIn",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "LinkedIn",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: LinkedInScrape-2021",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "LinkedInScrape-2021",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: LiveAuctioneers",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "LiveAuctioneers",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Luxottica",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Luxottica",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Mathway",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Mathway",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: McGrawHill",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "McGrawHill",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ModernBusinessSolutions",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ModernBusinessSolutions",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Moody",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Moody",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: MyFitnessPal",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "MyFitnessPal",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: MyHeritage",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "MyHeritage",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: MyRepoSpace",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "MyRepoSpace",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Naz.API",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Naz.API",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: NeimanMarcus",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "NeimanMarcus",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Nitro",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Nitro",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: OMGPOP",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "OMGPOP",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Onverse",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Onverse",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: PSPISO",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "PSPISO",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Paidwork",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Paidwork",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Pemiblanc",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Pemiblanc",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: PeopleDataLabs",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "PeopleDataLabs",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: PhoneHouse",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "PhoneHouse",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: PiZap",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "PiZap",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: PokemonNegro",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "PokemonNegro",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Poshmark",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Poshmark",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: R2games",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "R2games",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Rbx.Rocks",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Rbx.Rocks",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: RedDoorz",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "RedDoorz",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Robinhood",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Robinhood",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: SalvadoranCitizens",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "SalvadoranCitizens",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ShareThis",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ShareThis",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Shopback",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Shopback",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Snail",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Snail",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: SoarGames",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "SoarGames",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: SpecialKDataFeedSpamList",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "SpecialKDataFeedSpamList",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: StockX",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "StockX",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: SubaGames",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "SubaGames",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: SwordFantasy",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "SwordFantasy",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ToonDoo",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ToonDoo",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Tracelo",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Tracelo",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Trello",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Trello",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Tumblr",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Tumblr",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Twitter",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Twitter",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Twitter-Scraped",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Twitter-Scraped",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: UnderArmour",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "UnderArmour",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Unigame",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Unigame",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: VK",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "VK",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Verifications",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Verifications",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: VietnamAirlines",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "VietnamAirlines",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Wakanim",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Wakanim",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Wanelo",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Wanelo",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Wattpad",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Wattpad",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: WeHeartIt",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "WeHeartIt",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Whitepages",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Whitepages",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: WiredBucks",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "WiredBucks",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Wishbone",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Wishbone",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Yotepresto",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Yotepresto",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Zacks",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Zacks",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Zacks-2024",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Zacks-2024",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: ZenBusiness",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "ZenBusiness",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "breaches",
+      "kind": "breach",
+      "title": "Brecha: Zynga",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.7,
+      "url": "https://xposedornot.com/",
+      "data": {
+        "fuente": "XposedOrNot"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "breach",
+          "value": "Zynga",
+          "relation": "expuesto en",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "email_intel",
+      "kind": "info",
+      "title": "Dominio del email: gmail.com",
+      "selector": "email:alejandro@gmail.com",
+      "confidence": 0.8,
+      "url": null,
+      "data": {
+        "tiene_mx": true,
+        "mx": [
+          "20 alt2.gmail-smtp-in.l.google.com.",
+          "10 alt1.gmail-smtp-in.l.google.com.",
+          "40 alt4.gmail-smtp-in.l.google.com.",
+          "30 alt3.gmail-smtp-in.l.google.com.",
+          "5 gmail-smtp-in.l.google.com."
+        ],
+        "proveedor_gratuito": true,
+        "desechable": false
+      },
+      "timestamp": "2026-11-09T17:34:49+00:00",
+      "entities": [
+        {
+          "kind": "domain",
+          "value": "gmail.com",
+          "relation": "dominio del email",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    },
+    {
+      "module": "usernames",
+      "kind": "account",
+      "title": "Cuenta en GitHub",
+      "selector": "username:tamayonesa",
+      "confidence": 0.6,
+      "url": "https://github.com/tamayonesa",
+      "data": {
+        "plataforma": "GitHub",
+        "username": "tamayonesa"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "account",
+          "value": "GitHub:tamayonesa",
+          "relation": "tiene cuenta en",
+          "pivot": false,
+          "guess": false,
+          "label": "GitHub: tamayonesa"
+        }
+      ]
+    },
+    {
+      "module": "usernames",
+      "kind": "account",
+      "title": "Cuenta en PyPI",
+      "selector": "username:tamayonesa",
+      "confidence": 0.6,
+      "url": "https://pypi.org/user/tamayonesa/",
+      "data": {
+        "plataforma": "PyPI",
+        "username": "tamayonesa"
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "account",
+          "value": "PyPI:tamayonesa",
+          "relation": "tiene cuenta en",
+          "pivot": false,
+          "guess": false,
+          "label": "PyPI: tamayonesa"
+        }
+      ]
+    },
+    {
+      "module": "usernames",
+      "kind": "info",
+      "title": "Resumen de usernames: 2 de 18 plataformas",
+      "selector": "username:tamayonesa",
+      "confidence": 1.0,
+      "url": null,
+      "data": {
+        "encontrado_en": [
+          "GitHub",
+          "PyPI"
+        ],
+        "comprobadas": 18,
+        "sin_respuesta_fiable": [
+          "GitLab",
+          "npm",
+          "Bluesky",
+          "Medium"
+        ]
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": []
+    },
+    {
+      "module": "github",
+      "kind": "profile",
+      "title": "Perfil de GitHub: tamayonesa",
+      "selector": "username:tamayonesa",
+      "confidence": 0.9,
+      "url": "https://github.com/tamayonesa",
+      "data": {
+        "location": "Madrid/Mencorca, Spain",
+        "created_at": "2026-10-06T20:25:02Z",
+        "public_repos": 8,
+        "followers": 1
+      },
+      "timestamp": "2026-11-09T17:34:50+00:00",
+      "entities": [
+        {
+          "kind": "account",
+          "value": "GitHub:tamayonesa",
+          "relation": "tiene cuenta en",
+          "pivot": false,
+          "guess": false,
+          "label": "GitHub: tamayonesa"
+        },
+        {
+          "kind": "location",
+          "value": "Madrid/Mencorca, Spain",
+          "relation": "ubicación declarada",
+          "pivot": false,
+          "guess": false,
+          "label": null
+        }
+      ]
+    }
+  ],
+  "perfiles": [
+    {
+      "titulo": "tamayonesa",
+      "confianza": 0.99,
+      "fuentes": [
+        "github",
+        "usernames"
+      ],
+      "miembros": {
+        "Cuenta": [
+          "GitHub: tamayonesa",
+          "PyPI: tamayonesa"
+        ],
+        "Username": [
+          "tamayonesa"
+        ],
+        "Nombre": []
+      },
+      "total": 3
+    }
+  ],
+  "correlaciones": [],
+  "grafo": {
+    "nodes": [
+      {
+        "id": "target:objetivo",
+        "kind": "target",
+        "label": "Objetivo",
+        "sources": [],
+        "seed": true
+      },
+      {
+        "id": "name:paul alejandro tamayo mestanza",
+        "kind": "name",
+        "label": "Paul Alejandro Tamayo Mestanza",
+        "sources": [],
+        "seed": true
+      },
+      {
+        "id": "email:alejandro@gmail.com",
+        "kind": "email",
+        "label": "alejandro@gmail.com",
+        "sources": [],
+        "seed": true
+      },
+      {
+        "id": "username:tamayonesa",
+        "kind": "username",
+        "label": "tamayonesa",
+        "sources": [],
+        "seed": true
+      },
+      {
+        "id": "username:paul.alejandro",
+        "kind": "username",
+        "label": "paul.alejandro",
+        "sources": [],
+        "seed": false
+      },
+      {
+        "id": "username:paulalejandro",
+        "kind": "username",
+        "label": "paulalejandro",
+        "sources": [],
+        "seed": false
+      },
+      {
+        "id": "username:paul_alejandro",
+        "kind": "username",
+        "label": "paul_alejandro",
+        "sources": [],
+        "seed": false
+      },
+      {
+        "id": "username:palejandro",
+        "kind": "username",
+        "label": "palejandro",
+        "sources": [],
+        "seed": false
+      },
+      {
+        "id": "username:paula",
+        "kind": "username",
+        "label": "paula",
+        "sources": [],
+        "seed": false
+      },
+      {
+        "id": "breach:000webhost",
+        "kind": "breach",
+        "label": "000webhost",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:1.4billionrecords",
+        "kind": "breach",
+        "label": "1.4BillionRecords",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:123rf",
+        "kind": "breach",
+        "label": "123RF",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:1win",
+        "kind": "breach",
+        "label": "1Win",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:8tracks",
+        "kind": "breach",
+        "label": "8tracks",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:actmobile",
+        "kind": "breach",
+        "label": "ACTMobile",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:adt",
+        "kind": "breach",
+        "label": "ADT",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:att-speculated",
+        "kind": "breach",
+        "label": "ATT-Speculated",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:addi",
+        "kind": "breach",
+        "label": "Addi",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:adecco",
+        "kind": "breach",
+        "label": "Adecco",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:adobe",
+        "kind": "breach",
+        "label": "Adobe",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:alienstealerlogs",
+        "kind": "breach",
+        "label": "AlienStealerLogs",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:alleged-socradar",
+        "kind": "breach",
+        "label": "Alleged-SOCRadar",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:altenen",
+        "kind": "breach",
+        "label": "Altenen",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:animaljam",
+        "kind": "breach",
+        "label": "AnimalJam",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:animegame",
+        "kind": "breach",
+        "label": "AnimeGame",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:animoto",
+        "kind": "breach",
+        "label": "Animoto",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:apexsms",
+        "kind": "breach",
+        "label": "ApexSMS",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:appen",
+        "kind": "breach",
+        "label": "Appen",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:aptoide",
+        "kind": "breach",
+        "label": "Aptoide",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:armyforceonline",
+        "kind": "breach",
+        "label": "ArmyForceOnline",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:banorte",
+        "kind": "breach",
+        "label": "Banorte",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:blankmediagames",
+        "kind": "breach",
+        "label": "BlankMediaGames",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:bonobos",
+        "kind": "breach",
+        "label": "Bonobos",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:bookmate",
+        "kind": "breach",
+        "label": "Bookmate",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:bureauvandijk",
+        "kind": "breach",
+        "label": "BureauvanDijk",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:canva",
+        "kind": "breach",
+        "label": "Canva",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:charter",
+        "kind": "breach",
+        "label": "Charter",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:chegg",
+        "kind": "breach",
+        "label": "Chegg",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:cit0day",
+        "kind": "breach",
+        "label": "Cit0day",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:collection-1",
+        "kind": "breach",
+        "label": "Collection-1",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:cracked.to",
+        "kind": "breach",
+        "label": "Cracked.to",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:dailyquiz",
+        "kind": "breach",
+        "label": "DailyQuiz",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:dailymotion",
+        "kind": "breach",
+        "label": "Dailymotion",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:deezer",
+        "kind": "breach",
+        "label": "Deezer",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:disqus",
+        "kind": "breach",
+        "label": "Disqus",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:drivesure",
+        "kind": "breach",
+        "label": "DriveSure",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:dropbox",
+        "kind": "breach",
+        "label": "Dropbox",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:dubsmash",
+        "kind": "breach",
+        "label": "Dubsmash",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:duelingnetwork",
+        "kind": "breach",
+        "label": "DuelingNetwork",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:duolingo",
+        "kind": "breach",
+        "label": "Duolingo",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:edmodo",
+        "kind": "breach",
+        "label": "Edmodo",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:epik",
+        "kind": "breach",
+        "label": "Epik",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:evony",
+        "kind": "breach",
+        "label": "Evony",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:exvagos",
+        "kind": "breach",
+        "label": "ExVagos",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:exactsciences",
+        "kind": "breach",
+        "label": "ExactSciences",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:exploitin",
+        "kind": "breach",
+        "label": "ExploitIN",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:ggcorp",
+        "kind": "breach",
+        "label": "GGCorp",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:gamesprite",
+        "kind": "breach",
+        "label": "GameSprite",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:ge.tt",
+        "kind": "breach",
+        "label": "Ge.tt",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:gogames",
+        "kind": "breach",
+        "label": "GoGames",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:hautelook",
+        "kind": "breach",
+        "label": "HauteLook",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:heatgames",
+        "kind": "breach",
+        "label": "HeatGames",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:hurb",
+        "kind": "breach",
+        "label": "Hurb",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:idcgames",
+        "kind": "breach",
+        "label": "IDCGames",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:imesh",
+        "kind": "breach",
+        "label": "Imesh",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:instantcheckmate",
+        "kind": "breach",
+        "label": "InstantCheckmate",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:institutonacionaldedeportesdechile",
+        "kind": "breach",
+        "label": "InstitutoNacionalDeDeportesDeChile",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:jd",
+        "kind": "breach",
+        "label": "JD",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:jobandtalent",
+        "kind": "breach",
+        "label": "JobandTalent",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:joygames",
+        "kind": "breach",
+        "label": "JoyGames",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:kreditplus",
+        "kind": "breach",
+        "label": "KreditPlus",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:last.fm",
+        "kind": "breach",
+        "label": "Last.fm",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:ledger",
+        "kind": "breach",
+        "label": "Ledger",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:leet",
+        "kind": "breach",
+        "label": "Leet",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:lifeboat",
+        "kind": "breach",
+        "label": "Lifeboat",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:linkedin",
+        "kind": "breach",
+        "label": "LinkedIn",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:linkedinscrape-2021",
+        "kind": "breach",
+        "label": "LinkedInScrape-2021",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:liveauctioneers",
+        "kind": "breach",
+        "label": "LiveAuctioneers",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:luxottica",
+        "kind": "breach",
+        "label": "Luxottica",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:mathway",
+        "kind": "breach",
+        "label": "Mathway",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:mcgrawhill",
+        "kind": "breach",
+        "label": "McGrawHill",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:modernbusinesssolutions",
+        "kind": "breach",
+        "label": "ModernBusinessSolutions",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:moody",
+        "kind": "breach",
+        "label": "Moody",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:myfitnesspal",
+        "kind": "breach",
+        "label": "MyFitnessPal",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:myheritage",
+        "kind": "breach",
+        "label": "MyHeritage",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:myrepospace",
+        "kind": "breach",
+        "label": "MyRepoSpace",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:naz.api",
+        "kind": "breach",
+        "label": "Naz.API",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:neimanmarcus",
+        "kind": "breach",
+        "label": "NeimanMarcus",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:nitro",
+        "kind": "breach",
+        "label": "Nitro",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:omgpop",
+        "kind": "breach",
+        "label": "OMGPOP",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:onverse",
+        "kind": "breach",
+        "label": "Onverse",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:pspiso",
+        "kind": "breach",
+        "label": "PSPISO",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:paidwork",
+        "kind": "breach",
+        "label": "Paidwork",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:pemiblanc",
+        "kind": "breach",
+        "label": "Pemiblanc",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:peopledatalabs",
+        "kind": "breach",
+        "label": "PeopleDataLabs",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:phonehouse",
+        "kind": "breach",
+        "label": "PhoneHouse",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:pizap",
+        "kind": "breach",
+        "label": "PiZap",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:pokemonnegro",
+        "kind": "breach",
+        "label": "PokemonNegro",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:poshmark",
+        "kind": "breach",
+        "label": "Poshmark",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:r2games",
+        "kind": "breach",
+        "label": "R2games",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:rbx.rocks",
+        "kind": "breach",
+        "label": "Rbx.Rocks",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:reddoorz",
+        "kind": "breach",
+        "label": "RedDoorz",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:robinhood",
+        "kind": "breach",
+        "label": "Robinhood",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:salvadorancitizens",
+        "kind": "breach",
+        "label": "SalvadoranCitizens",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:sharethis",
+        "kind": "breach",
+        "label": "ShareThis",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:shopback",
+        "kind": "breach",
+        "label": "Shopback",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:snail",
+        "kind": "breach",
+        "label": "Snail",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:soargames",
+        "kind": "breach",
+        "label": "SoarGames",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:specialkdatafeedspamlist",
+        "kind": "breach",
+        "label": "SpecialKDataFeedSpamList",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:stockx",
+        "kind": "breach",
+        "label": "StockX",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:subagames",
+        "kind": "breach",
+        "label": "SubaGames",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:swordfantasy",
+        "kind": "breach",
+        "label": "SwordFantasy",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:toondoo",
+        "kind": "breach",
+        "label": "ToonDoo",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:tracelo",
+        "kind": "breach",
+        "label": "Tracelo",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:trello",
+        "kind": "breach",
+        "label": "Trello",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:tumblr",
+        "kind": "breach",
+        "label": "Tumblr",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:twitter",
+        "kind": "breach",
+        "label": "Twitter",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:twitter-scraped",
+        "kind": "breach",
+        "label": "Twitter-Scraped",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:underarmour",
+        "kind": "breach",
+        "label": "UnderArmour",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:unigame",
+        "kind": "breach",
+        "label": "Unigame",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:vk",
+        "kind": "breach",
+        "label": "VK",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:verifications",
+        "kind": "breach",
+        "label": "Verifications",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:vietnamairlines",
+        "kind": "breach",
+        "label": "VietnamAirlines",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:wakanim",
+        "kind": "breach",
+        "label": "Wakanim",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:wanelo",
+        "kind": "breach",
+        "label": "Wanelo",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:wattpad",
+        "kind": "breach",
+        "label": "Wattpad",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:weheartit",
+        "kind": "breach",
+        "label": "WeHeartIt",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:whitepages",
+        "kind": "breach",
+        "label": "Whitepages",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:wiredbucks",
+        "kind": "breach",
+        "label": "WiredBucks",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:wishbone",
+        "kind": "breach",
+        "label": "Wishbone",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:yotepresto",
+        "kind": "breach",
+        "label": "Yotepresto",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:zacks",
+        "kind": "breach",
+        "label": "Zacks",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:zacks-2024",
+        "kind": "breach",
+        "label": "Zacks-2024",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:zenbusiness",
+        "kind": "breach",
+        "label": "ZenBusiness",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "breach:zynga",
+        "kind": "breach",
+        "label": "Zynga",
+        "sources": [
+          "breaches"
+        ],
+        "seed": false
+      },
+      {
+        "id": "domain:gmail.com",
+        "kind": "domain",
+        "label": "gmail.com",
+        "sources": [
+          "email_intel"
+        ],
+        "seed": false
+      },
+      {
+        "id": "account:github:tamayonesa",
+        "kind": "account",
+        "label": "GitHub: tamayonesa",
+        "sources": [
+          "github",
+          "usernames"
+        ],
+        "seed": false
+      },
+      {
+        "id": "account:pypi:tamayonesa",
+        "kind": "account",
+        "label": "PyPI: tamayonesa",
+        "sources": [
+          "usernames"
+        ],
+        "seed": false
+      },
+      {
+        "id": "location:madrid/mencorca, spain",
+        "kind": "location",
+        "label": "Madrid/Mencorca, Spain",
+        "sources": [
+          "github"
+        ],
+        "seed": false
+      }
+    ],
+    "edges": [
+      {
+        "source": "target:objetivo",
+        "target": "name:paul alejandro tamayo mestanza",
+        "relation": "dato de entrada",
+        "modules": [
+          "usuario"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "source": "target:objetivo",
+        "target": "email:alejandro@gmail.com",
+        "relation": "dato de entrada",
+        "modules": [
+          "usuario"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "source": "target:objetivo",
+        "target": "username:tamayonesa",
+        "relation": "dato de entrada",
+        "modules": [
+          "usuario"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "source": "name:paul alejandro tamayo mestanza",
+        "target": "username:paul.alejandro",
+        "relation": "posible username",
+        "modules": [
+          "name_intel"
+        ],
+        "confidence": 0.2
+      },
+      {
+        "source": "name:paul alejandro tamayo mestanza",
+        "target": "username:paulalejandro",
+        "relation": "posible username",
+        "modules": [
+          "name_intel"
+        ],
+        "confidence": 0.2
+      },
+      {
+        "source": "name:paul alejandro tamayo mestanza",
+        "target": "username:paul_alejandro",
+        "relation": "posible username",
+        "modules": [
+          "name_intel"
+        ],
+        "confidence": 0.2
+      },
+      {
+        "source": "name:paul alejandro tamayo mestanza",
+        "target": "username:palejandro",
+        "relation": "posible username",
+        "modules": [
+          "name_intel"
+        ],
+        "confidence": 0.2
+      },
+      {
+        "source": "name:paul alejandro tamayo mestanza",
+        "target": "username:paula",
+        "relation": "posible username",
+        "modules": [
+          "name_intel"
+        ],
+        "confidence": 0.2
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:000webhost",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:1.4billionrecords",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:123rf",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:1win",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:8tracks",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:actmobile",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:adt",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:att-speculated",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:addi",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:adecco",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:adobe",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:alienstealerlogs",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:alleged-socradar",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:altenen",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:animaljam",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:animegame",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:animoto",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:apexsms",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:appen",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:aptoide",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:armyforceonline",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:banorte",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:blankmediagames",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:bonobos",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:bookmate",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:bureauvandijk",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:canva",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:charter",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:chegg",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:cit0day",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:collection-1",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:cracked.to",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:dailyquiz",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:dailymotion",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:deezer",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:disqus",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:drivesure",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:dropbox",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:dubsmash",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:duelingnetwork",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:duolingo",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:edmodo",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:epik",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:evony",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:exvagos",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:exactsciences",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:exploitin",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:ggcorp",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:gamesprite",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:ge.tt",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:gogames",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:hautelook",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:heatgames",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:hurb",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:idcgames",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:imesh",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:instantcheckmate",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:institutonacionaldedeportesdechile",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:jd",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:jobandtalent",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:joygames",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:kreditplus",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:last.fm",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:ledger",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:leet",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:lifeboat",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:linkedin",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:linkedinscrape-2021",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:liveauctioneers",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:luxottica",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:mathway",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:mcgrawhill",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:modernbusinesssolutions",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:moody",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:myfitnesspal",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:myheritage",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:myrepospace",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:naz.api",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:neimanmarcus",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:nitro",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:omgpop",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:onverse",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:pspiso",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:paidwork",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:pemiblanc",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:peopledatalabs",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:phonehouse",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:pizap",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:pokemonnegro",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:poshmark",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:r2games",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:rbx.rocks",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:reddoorz",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:robinhood",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:salvadorancitizens",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:sharethis",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:shopback",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:snail",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:soargames",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:specialkdatafeedspamlist",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:stockx",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:subagames",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:swordfantasy",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:toondoo",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:tracelo",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:trello",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:tumblr",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:twitter",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:twitter-scraped",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:underarmour",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:unigame",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:vk",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:verifications",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:vietnamairlines",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:wakanim",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:wanelo",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:wattpad",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:weheartit",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:whitepages",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:wiredbucks",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:wishbone",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:yotepresto",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:zacks",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:zacks-2024",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:zenbusiness",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "breach:zynga",
+        "relation": "expuesto en",
+        "modules": [
+          "breaches"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "source": "email:alejandro@gmail.com",
+        "target": "domain:gmail.com",
+        "relation": "dominio del email",
+        "modules": [
+          "email_intel"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "source": "username:tamayonesa",
+        "target": "account:github:tamayonesa",
+        "relation": "tiene cuenta en",
+        "modules": [
+          "github",
+          "usernames"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "source": "username:tamayonesa",
+        "target": "account:pypi:tamayonesa",
+        "relation": "tiene cuenta en",
+        "modules": [
+          "usernames"
+        ],
+        "confidence": 0.6
+      },
+      {
+        "source": "username:tamayonesa",
+        "target": "location:madrid/mencorca, spain",
+        "relation": "ubicación declarada",
+        "modules": [
+          "github"
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "errores": []
+}
